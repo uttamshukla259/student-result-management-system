@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<div class="header1">
+    <div class="header">
+
+        <button class="bt1" onclick="showStudentLogin()">STUDENT</button>
+        <button class="bt2" onclick="showAdminLogin()">ADMIN</button>
+
+    </div>
+</div>
+
+    <div class="container">
+        <div class="section"  id="student-login-form">
+            <h2>Student Section</h2>
+            <input type="text" id="student-rollNo" placeholder="Enter Roll No">
+            <button onclick="getResult()">Get Result</button>
+            <button onclick="hideLogin()">Cancel</button>
+            <div    id="student-result"></div>
+
+        </div>
+        <div class="section" id="admin-login-form">
+            <h2>Admin Section</h2>
+            <input type="password" id="admin-password" placeholder="Enter Admin Password">
+            <button onclick="authenticateAdmin()">Login</button>
+            <button onclick="hideLogin()">Cancel</button>
+            <div id="admin-area" style="display:none;">
+                <div class="crud-section">
+                 
+                    <button class="crud" onclick="showSection('getAllStudentsForm')">Get All Students</button>
+                    <button class="crud" onclick="showSection('addStudentForm')">Add Student</button>
+                    <button class="crud" onclick="showSection('updateStudentForm')">Update Student</button>
+                    <button class="crud" onclick="showSection('deleteStudentForm')">Delete Student</button>
+                    <div id="student-crud-result"></div>
+                </div>
+                <div class="crud-section">
+                    
+                    <button class="crud" onclick="showSection('getAllResultsForm')">Get All Results</button>
+                    <button class="crud" onclick="showSection('addResultForm')">Add Result</button>
+                    <button class="crud" onclick="showSection('updateResultForm')">Update Result</button>
+                    <button class="crud" onclick="showSection('deleteResultForm')">Delete Result</button>
+                    <div id="result-crud-result"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Student Forms -->
+    <div id="getAllStudentsForm" class="form-container">
+        <h3>All Students</h3>
+        <button onclick="getAllStudents()">Fetch All Students</button>
+        <button onclick="hideForm('getAllStudentsForm')">Back</button>
+        <div id="all-students-result"></div>
+    </div>
+
+    <div id="addStudentForm" class="form-container">
+        <h3>Add Student</h3>
+        <input type="text" id="studentName" placeholder="Name">
+        <input type="text" id="studentRollNo" placeholder="Roll No">
+        <input type="text" id="studentGender" placeholder="Gender">
+        <input type="text" id="studentFatherName" placeholder="Father's Name">
+        <input type="text" id="studentCourseName" placeholder="Course Name">
+        <input type="text" id="studentBranchName" placeholder="Branch Name">
+        <button onclick="addStudent()">Add</button>
+        <button onclick="hideForm('addStudentForm')">Back</button>
+    </div>
+
+    <div id="updateStudentForm" class="form-container">
+        <h3>Update Student</h3>
+        <input type="text" id="updateStudentRollNo" placeholder="Roll No">
+        <input type="text" id="updateStudentName" placeholder="New Name">
+        <input type="text" id="updateStudentGender" placeholder="New Gender">
+        <input type="text" id="updateStudentFatherName" placeholder="New Father's Name">
+        <input type="text" id="updateStudentCourseName" placeholder="New Course Name">
+        <input type="text" id="updateStudentBranchName" placeholder="New Branch Name">
+        <button onclick="updateStudent()">Update</button>
+        <button onclick="hideForm('updateStudentForm')">Back</button>
+    </div>
+
+    <div id="deleteStudentForm" class="form-container">
+        <h3>Delete Student</h3>
+        <input type="text" id="deleteStudentRollNo" placeholder="Roll No">
+        <button onclick="deleteStudent()">Delete</button>
+        <button onclick="hideForm('deleteStudentForm')">Back</button>
+    </div>
+
+    <!-- Result Forms -->
+    <div id="getAllResultsForm" class="form-container">
+        <h3>All Results</h3>
+        <button onclick="getAllResults()">Fetch All Results</button>
+        <button onclick="hideForm('getAllResultsForm')">Back</button>
+        <div id="all-results-result"></div>
+    </div>
+
+    <div id="addResultForm" class="form-container">
+        <h3>Add Result</h3>
+        <input type="text" id="resultRollNo" placeholder="Roll No">
+        <input type="text" id="resultMath" placeholder="MATH">
+        <input type="text" id="resultChemistry" placeholder="CHEMISTRY">
+        <input type="text" id="resultPhysics" placeholder="PHYSICS">
+        <input type="text" id="resultEnglish" placeholder="ENGLISH">
+        <input type="text" id="resultElectrical" placeholder="ELECTRICAL">
+        <input type="text" id="resultTotal" placeholder="TOTAL">
+        <button onclick="addResult()">Add</button>
+        <button onclick="hideForm('addResultForm')">Back</button>
+    </div>
+
+    <div id="updateResultForm" class="form-container">
+        <h3>Update Result</h3>
+        <input type="text" id="updateResultRollNo" placeholder="Roll No">
+        <input type="text" id="updateResultMath" placeholder="New MATH">
+        <input type="text" id="updateResultChemistry" placeholder="New CHEMISTRY">
+        <input type="text" id="updateResultPhysics" placeholder="New PHYSICS">
+        <input type="text" id="updateResultEnglish" placeholder="New ENGLISH">
+        <input type="text" id="updateResultElectrical" placeholder="New ELECTRICAL">
+        <input type="text" id="updateResultTotal" placeholder="New TOTAL">
+        <button onclick="updateResult()">Update</button>
+        <button onclick="hideForm('updateResultForm')">Back</button>
+    </div>
+
+    <div id="deleteResultForm" class="form-container">
+        <h3>Delete Result</h3>
+        <input type="text" id="deleteResultRollNo" placeholder="Roll No">
+        <button onclick="deleteResult()">Delete</button>
+        <button onclick="hideForm('deleteResultForm')">Back</button>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>

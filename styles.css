@@ -1,0 +1,179 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    background-image: url("img1.avif");
+}
+.header{
+    display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px auto;
+}
+.bt1,
+.bt2 {
+    width: 30%;
+    margin: 10px;
+    font-size: larger;
+    padding: 5px;
+    border-radius: 15px;
+    box-shadow: 2px 8px 15px;
+}
+.container {
+     width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-items: center;
+    margin: 10px;
+}
+
+.section {
+  text-align: center;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #fff;
+    width: 90%;
+    display: none;
+    background-image: url("img2.avif"); 
+}
+
+.section h2,
+.crud-section h3 {
+    margin-top: 0;
+}
+
+.crud-section{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    margin: 10px;
+   
+}
+.crud{
+     margin: 10px;
+}
+button {
+   
+    display: block;
+    margin: 10px 0;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.form-container {
+
+    text-align: center;
+    display: none;
+position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 70%;
+    margin: 10px;
+    
+}
+
+.form-container h3 {
+    margin-top: 0;
+}
+
+.form-container input {
+   
+    display: block;
+    width: 95%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-container button {
+    width: 100%;
+}
+
+
+
+/* result data */
+
+.R-container {
+   
+  width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    
+}
+
+.R-header,
+.R-section {
+    margin-bottom: 20px;
+    
+}
+
+.R-header h2,
+.R-section h3 {
+   
+    margin: 0;
+    padding: 0;
+}
+
+.R-section table {
+    width: 100%;
+    border-collapse: collapse;
+    
+}
+
+.R-section table,
+.R-section th,
+.R-section td {
+    border: 1px solid #800808;
+  
+}
+
+.R-section th,
+.R-section td {
+    padding: 8px;
+    text-align: left;
+    color: #007bff;
+    font-size: medium;
+}
+
+.R-total {
+    font-weight: bold;
+    text-align: right;
+    color: rgb(113, 18, 18);
+}
+
+
+.R-result table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.R-result table,
+.R-result th,
+.R-result td {
+    border: 1px solid #0c0b0b;
+}
+
+.R-result th,
+.R-result td {
+    padding: 8px;
+    text-align: left;
+}
